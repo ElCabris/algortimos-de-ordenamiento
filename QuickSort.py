@@ -11,8 +11,12 @@ def partition(a, menor, mayor):
 
     for i in range(menor, mayor):
         if a[i] < pivote:
-            a[i], a[elementos_menores] = a[elementos_menores], a[i]
+            aux = a[i]
+            a[i] = a[elementos_menores]
+            a[elementos_menores] = aux
             elementos_menores += 1
 
-    a[elementos_menores], a[mayor] = a[mayor], a[elementos_menores]
+    aux = a[elementos_menores]
+    a[elementos_menores] = a[mayor]
+    a[mayor] = aux
     return elementos_menores
