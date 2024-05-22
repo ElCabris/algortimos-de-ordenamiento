@@ -7,7 +7,3 @@ def insertion_sort(a):
             a[j + 1] = a[j]
             j -= 1
         a[j + 1] = key
-
-arreglo = [12, 11, 13, 5, 6]
-insertion_sort(arreglo)
-print(arreglo)
